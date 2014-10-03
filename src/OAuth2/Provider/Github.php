@@ -38,10 +38,10 @@ class Github extends Provider {
 		$user = json_decode(file_get_contents($url, false, $context));
 
 		return array(
-			'uid' 		 => $user->id,
-			'nickname' 	 => $user->login,
-			'name' 		 => isset($user->name) ? $user->name : null,
-			'email' 	 => isset($user->email) ? $user->email : null,
+			'uid' => $user->id,
+			'nickname' => $user->login,
+			'name' => isset($user->name) ? $user->name : null,
+			'email' => isset($user->email) ? $user->email : null,
 			'avatar_url' => isset($user->avatar_url) ? $user->avatar_url : null,
 			'urls' => array(
 				'GitHub' => 'http://github.com/'.$user->login,
